@@ -32,12 +32,23 @@ addFinal.addEventListener("click", () => {
     lista_nomes.push(valorInput)
     mostrar_nomes()
 })
+removFinal.addEventListener("click", () => {
+    listaTela.innerHTML = ""
 
+    lista_nomes.pop()
+    mostrar_nomes()
+})
 addInicio.addEventListener("click", () => {
     let valorInput = input.value
 
     listaTela.innerHTML = ""
 
     lista_nomes.unshift(valorInput)
+    mostrar_nomes()
+})
+removInicio.addEventListener("click", () => {
+    listaTela.innerHTML = ""
+
+    lista_nomes.shift()
     mostrar_nomes()
 })
