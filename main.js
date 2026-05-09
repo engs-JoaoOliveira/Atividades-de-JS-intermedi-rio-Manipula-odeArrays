@@ -3,6 +3,7 @@ const addFinal = document.getElementById("addFinal")
 const removFinal = document.getElementById("removFinal")
 const addInicio = document.getElementById("addInicio")
 const removInicio = document.getElementById("removInicio")
+const contar = document.getElementById("contar")
 
 
 let lista_nomes = ["Aléquis", "Ultron", "Kevinho"];
@@ -18,6 +19,20 @@ function mostrar_nomes(){
         item.innerText = nome
         listaTela.appendChild(item)
     }
+    contarNomes()
+}
+
+function contarNomes() {
+    let contagem = 0
+
+    lista_nomes.forEach(nome => {
+        if (nome.length > 5) {
+            contagem++
+        }
+    })
+
+    contar.innerText =
+        `Nomes com mais de 5 letras: ${contagem}`
 }
 
 document.addEventListener("DOMContentLoaded", () => {
